@@ -2,6 +2,7 @@ import argparse
 import json
 import logging
 import os
+os.environ['TRANSFORMERS_CACHE'] = '/scratch/brc4cb/llama/cache'
 import sys
 from functools import partial
 from typing import Union
