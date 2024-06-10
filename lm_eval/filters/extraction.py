@@ -39,6 +39,11 @@ class RegexFilter(Filter):
                     if isinstance(match, tuple):
                         match = [m for m in match if m][0]
                     match = match.strip()
+                    try: 
+                        match = float(match)
+                        match = str(match)
+                    except: 
+                        match = match
                 else:
                     match = self.fallback
                 filtered.append(match)
