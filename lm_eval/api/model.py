@@ -306,7 +306,6 @@ class CachingLM:
     def get_cache_hook(self):
         return CacheHook(self)
 
-
 class TemplateLM(LM):
     """
     A class acting as intermediary between the LM base class

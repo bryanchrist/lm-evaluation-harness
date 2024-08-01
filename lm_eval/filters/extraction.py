@@ -40,6 +40,9 @@ class RegexFilter(Filter):
                         match = [m for m in match if m][0]
                     match = match.strip()
                     try: 
+                        if "," in match:
+                            match = match.split(",")
+                            match = "".join(match)
                         match = float(match)
                         match = str(match)
                     except: 
